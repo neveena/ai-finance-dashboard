@@ -63,7 +63,7 @@ Ensure you have the following installed:
    - Create a `.env` file in the project root.
    - Add your OpenAI API key:
      ```plaintext
-     REACT_APP_OPENAI_API_KEY=your_openai_api_key
+     OPENAI_API_KEY=your_openai_api_key
      ```
 
 4. Start the development server:
