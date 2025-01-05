@@ -5,11 +5,11 @@ import { useGlobalState } from '../state/GlobalState';
 const AIInsights: React.FC = () => {
   const { state, dispatch } = useGlobalState();
   const [loading, setLoading] = useState(false);
-
+ 
   const fetchInsight = async () => {
     setLoading(true);
     try {
-      const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
+      const apiKey = process.env.OPENAI_API_KEY;
 
       if (!apiKey) {
         throw new Error('OpenAI API key is missing in .env file');
@@ -45,7 +45,6 @@ const AIInsights: React.FC = () => {
         dispatch({ type: 'SET_INSIGHT', payload: 'Failed to fetch insights' });
       }
     } catch (error) {
-      console.error('Error fetching AI insights:', error);
       dispatch({ type: 'SET_INSIGHT', payload: 'Error fetching insights' });
     } finally {
       setLoading(false);
