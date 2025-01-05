@@ -120,14 +120,6 @@ src/
 
 ---
 
-## Security Considerations
-1. **Environment Variables**:
-   - API keys are stored in a `.env` file and should never be committed to version control.
-2. **Frontend API Calls**:
-   - Ensure sensitive data is handled securely. Consider using a backend proxy for higher security.
-
----
-
 ## Future Enhancements
 1. **Authentication**:
    - Add user authentication to save and retrieve personal data.
